@@ -1,0 +1,7 @@
+openeo
+xarray
+matplotlib
+folium
+pandas
+numpy
+netCDF4
