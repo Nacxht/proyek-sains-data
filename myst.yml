@@ -4,7 +4,8 @@ project:
   id: e4d34d5b-d3f4-41bb-b689-b5811f1b3858
   title: Proyek Sains Data
   toc:
-    - file: src/data_crawling/data_crawling.ipynb
+    - file: src/tugas-1/tugas_1.ipynb
+    - file: src/tugas-2/tugas_2.ipynb
   # description:
   # keywords: []
   # authors: []
