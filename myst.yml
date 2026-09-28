@@ -5,5 +5,6 @@ project:
   - file: src/tugas-1/tugas_1.ipynb
   - file: src/tugas-2/tugas_2.ipynb
   - file: src/tugas-3/tugas_3.ipynb
+  - file: src/tugas-4/tugas_4.ipynb
 site:
   template: book-theme
