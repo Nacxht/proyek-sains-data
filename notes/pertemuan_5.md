@@ -13,7 +13,7 @@
 
 ## Tugas:
 
-### Interpolasi Polinomial
+### Interpolasi Polinomial - [5.1]
 
 - Mulai ulang dari data hasil tugas 1
 - Mengimplementasikan Interpolasi Polinomial
@@ -23,7 +23,7 @@
 Note:
 > Intinya sama kayak tugas sebelumnya. Bedanya, interpolasi di tugas ini menggunakan interpolasi polinomial.
 
-### Citra Satelit (Sentinel-2A)
+### Citra Satelit (Sentinel-2A) - [5.2]
 
 - Praktek Klasifikasi Citra Satelit
   - Menandai AoI (Area of Interests), spesifiknya hanya "sawah"

@@ -6,3 +6,6 @@ pandas
 numpy
 netCDF4
 tsfel
+rasterio
+geopandas
+shapely
