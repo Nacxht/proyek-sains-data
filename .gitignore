@@ -1,2 +1,5 @@
-_build
-.venv
+.venv/
+_build/
+__pycache__/
+*.tif
+*.joblib
