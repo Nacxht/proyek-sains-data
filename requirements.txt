@@ -9,3 +9,7 @@ tsfel
 rasterio
 geopandas
 shapely
+scikit-learn
+xgboost
+streamlit
+streamlit-folium
