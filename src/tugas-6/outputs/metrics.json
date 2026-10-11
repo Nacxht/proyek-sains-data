@@ -1,0 +1,73 @@
+{
+  "model": "XGBoost",
+  "akurasi_uji": 0.9556428434566009,
+  "f1_macro_uji": 0.9337421826959194,
+  "cv": [
+    {
+      "model": "RandomForest",
+      "akurasi_cv": 0.9703,
+      "std": 0.0058,
+      "f1_macro_cv": 0.9444
+    },
+    {
+      "model": "XGBoost",
+      "akurasi_cv": 0.9708,
+      "std": 0.0047,
+      "f1_macro_cv": 0.9468
+    }
+  ],
+  "laporan": {
+    "Bangunan": {
+      "precision": 0.96875,
+      "recall": 0.9673105497771174,
+      "f1-score": 0.9680297397769517,
+      "support": 673.0
+    },
+    "Lahan pertanian": {
+      "precision": 0.8257328990228013,
+      "recall": 0.8651877133105802,
+      "f1-score": 0.845,
+      "support": 1172.0
+    },
+    "Badan air": {
+      "precision": 0.9842726081258192,
+      "recall": 0.9800978792822186,
+      "f1-score": 0.9821808075854177,
+      "support": 3065.0
+    },
+    "Hutan": {
+      "precision": 0.9759134517248418,
+      "recall": 0.9654684975767367,
+      "f1-score": 0.9706628768652928,
+      "support": 4952.0
+    },
+    "Hutan mangrove": {
+      "precision": 0.8943781942078365,
+      "recall": 0.9114583333333334,
+      "f1-score": 0.9028374892519346,
+      "support": 576.0
+    },
+    "accuracy": 0.9556428434566009,
+    "macro avg": {
+      "precision": 0.9298094306162599,
+      "recall": 0.9379045946559972,
+      "f1-score": 0.9337421826959194,
+      "support": 10438.0
+    },
+    "weighted avg": {
+      "precision": 0.9565442138690831,
+      "recall": 0.9556428434566009,
+      "f1-score": 0.9560227198855372,
+      "support": 10438.0
+    }
+  },
+  "piksel_latih": 41719,
+  "piksel_uji": 10438,
+  "poligon_per_kelas": {
+    "built_up": 68,
+    "farmland": 99,
+    "forest": 100,
+    "mangrove": 64,
+    "water": 84
+  }
+}
