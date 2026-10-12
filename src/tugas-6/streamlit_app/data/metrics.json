@@ -1,73 +1,73 @@
 {
   "model": "XGBoost",
-  "akurasi_uji": 0.9556428434566009,
-  "f1_macro_uji": 0.9337421826959194,
+  "akurasi_uji": 0.9513518659558263,
+  "f1_macro_uji": 0.9122860269912731,
   "cv": [
     {
       "model": "RandomForest",
-      "akurasi_cv": 0.9703,
-      "std": 0.0058,
-      "f1_macro_cv": 0.9444
+      "akurasi_cv": 0.9676,
+      "std": 0.0044,
+      "f1_macro_cv": 0.9473
     },
     {
       "model": "XGBoost",
-      "akurasi_cv": 0.9708,
-      "std": 0.0047,
-      "f1_macro_cv": 0.9468
+      "akurasi_cv": 0.9693,
+      "std": 0.0033,
+      "f1_macro_cv": 0.9509
     }
   ],
   "laporan": {
     "Bangunan": {
-      "precision": 0.96875,
-      "recall": 0.9673105497771174,
-      "f1-score": 0.9680297397769517,
-      "support": 673.0
+      "precision": 0.8628719275549805,
+      "recall": 0.9542203147353362,
+      "f1-score": 0.90625,
+      "support": 699.0
     },
     "Lahan pertanian": {
-      "precision": 0.8257328990228013,
-      "recall": 0.8651877133105802,
-      "f1-score": 0.845,
+      "precision": 0.9544626593806922,
+      "recall": 0.89419795221843,
+      "f1-score": 0.9233480176211454,
       "support": 1172.0
     },
     "Badan air": {
-      "precision": 0.9842726081258192,
-      "recall": 0.9800978792822186,
-      "f1-score": 0.9821808075854177,
-      "support": 3065.0
+      "precision": 0.9875842497339482,
+      "recall": 0.9065450993161837,
+      "f1-score": 0.9453310696095076,
+      "support": 3071.0
     },
     "Hutan": {
-      "precision": 0.9759134517248418,
-      "recall": 0.9654684975767367,
-      "f1-score": 0.9706628768652928,
-      "support": 4952.0
+      "precision": 0.9857943177270908,
+      "recall": 0.9945498587000404,
+      "f1-score": 0.990152733118971,
+      "support": 4954.0
     },
     "Hutan mangrove": {
-      "precision": 0.8943781942078365,
-      "recall": 0.9114583333333334,
-      "f1-score": 0.9028374892519346,
-      "support": 576.0
+      "precision": 0.6948529411764706,
+      "recall": 0.9325657894736842,
+      "f1-score": 0.7963483146067416,
+      "support": 608.0
     },
-    "accuracy": 0.9556428434566009,
+    "accuracy": 0.9513518659558263,
     "macro avg": {
-      "precision": 0.9298094306162599,
-      "recall": 0.9379045946559972,
-      "f1-score": 0.9337421826959194,
-      "support": 10438.0
+      "precision": 0.8971132191146364,
+      "recall": 0.9364158028887349,
+      "f1-score": 0.9122860269912731,
+      "support": 10504.0
     },
     "weighted avg": {
-      "precision": 0.9565442138690831,
-      "recall": 0.9556428434566009,
-      "f1-score": 0.9560227198855372,
-      "support": 10438.0
+      "precision": 0.9578012741187509,
+      "recall": 0.9513518659558263,
+      "f1-score": 0.9527932936571842,
+      "support": 10504.0
     }
   },
-  "piksel_latih": 41719,
-  "piksel_uji": 10438,
+  "piksel_latih": 41997,
+  "piksel_uji": 10504,
   "poligon_per_kelas": {
-    "built_up": 68,
-    "farmland": 99,
+    "built_up": 100,
+    "farmland": 100,
     "forest": 100,
-    "mangrove": 64,
-    "water": 84
+    "mangrove": 115,
+    "water": 95
   }
 }

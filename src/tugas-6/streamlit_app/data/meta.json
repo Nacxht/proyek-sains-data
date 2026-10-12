@@ -1,18 +1,18 @@
 {
   "bounds": [
-    113.24734,
-    -8.8434,
-    114.64418,
-    -7.55714
+    110.88017,
+    -9.01576,
+    114.91241,
+    -6.56131
   ],
-  "min_ha_kelas_besar": 5,
-  "toleransi_derajat": 0.0005,
-  "ukuran_mb": 9.99,
+  "min_ha_kelas_besar": 40,
+  "toleransi_derajat": 0.002,
+  "ukuran_mb": 19.65,
   "poligon": {
-    "built_up": 3055,
-    "farmland": 2235,
-    "water": 193,
-    "forest": 2138,
-    "mangrove": 237
+    "built_up": 2653,
+    "farmland": 1853,
+    "water": 6874,
+    "forest": 1223,
+    "mangrove": 2371
   }
 }
