@@ -45,6 +45,7 @@ CLASSES = [
         "en": "Mangrove forest",
         "color": "#00e5c0",
     },
+    {"code": "other", "label": "Lainnya", "en": "Other", "color": "#808080"},
 ]
 ESRI_IMAGERY = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
 
@@ -122,8 +123,8 @@ with tab_bu:
 
     st.subheader("Tujuan")
     st.markdown(
-        "1. Memetakan permukaan bumi secara otomatis dari citra Sentinel-2 L2A ke dalam **lima kelas**: "
-        "bangunan, lahan pertanian, badan air, hutan, dan hutan mangrove.\n"
+        "1. Memetakan permukaan bumi secara otomatis dari citra Sentinel-2 L2A ke dalam **enam kelas**: "
+        "bangunan, lahan pertanian, badan air, hutan, hutan mangrove, dan lainnya (other).\n"
         "2. Membedakan **mangrove dari hutan biasa**. Keduanya sama-sama hijau, tetapi respons band "
         "inframerah-gelombang-pendek (komposit B8A-B11-B4) berbeda.\n"
         "3. Mendukung pemantauan lahan, tata ruang, dan konservasi lewat peta interaktif, ringkasan luas "
@@ -151,6 +152,7 @@ with tab_bu:
                     "Laut, danau, dan perairan lainnya",
                     "Hutan daratan",
                     "Hutan mangrove di pesisir",
+                    "Lahan terbuka, pasir, atau tutupan lainnya",
                 ],
             )
         )

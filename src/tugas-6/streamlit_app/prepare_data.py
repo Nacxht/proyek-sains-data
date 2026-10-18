@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 """
-Perkecil hasil klasifikasi dari notebook (outputs/) menjadi data ringan untuk aplikasi (data/).
+Perkecil hasil klasifikasi dari notebook (openeo_out/) menjadi data ringan untuk aplikasi (data/).
 
 Jalankan LOKAL (butuh geopandas), bukan di server deploy:
-    python prepare_data.py --src ../outputs --dst data --target-mb 12
+    python prepare_data.py --src ../openeo_out --dst data --target-mb 12
 
 Setiap kali model dilatih ulang, jalankan lagi skrip ini lalu push folder data/ ke GitHub.
 """
@@ -17,7 +17,7 @@ from pathlib import Path
 
 import geopandas as gpd
 
-CODES = ["built_up", "farmland", "water", "forest", "mangrove"]
+CODES = ["built_up", "farmland", "water", "forest", "mangrove", "other"]
 PROTECTED = {"mangrove", "water"}  # kelas kecil/penting: jangan dibuang bercaknya
 
 # (luas minimum ha, toleransi penyederhanaan dalam derajat ~ 0.0003 deg = 33 m), dari halus ke kasar
@@ -57,7 +57,11 @@ def shrink(gdf, code, min_ha, tol):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default="outputs")
+    ap.add_argument(
+        "--src",
+        default="../openeo_out" if Path("../openeo_out").exists() else "openeo_out",
+        help="folder sumber hasil klasifikasi (default: ../openeo_out)",
+    )
     ap.add_argument("--dst", default="data")
     ap.add_argument(
         "--target-mb", type=float, default=12.0, help="total ukuran semua GeoJSON"
