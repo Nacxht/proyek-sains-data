@@ -21,11 +21,11 @@ APP = {
 # Parameter alur (dokumentasi)
 PIPELINE = {
     "sumber": "Sentinel-2 L2A (Copernicus Data Space Ecosystem, lewat openEO)",
-    "periode": "1 Juni – 30 September 2026 (musim kemarau)",
+    "periode": "1 Juni - 30 September 2026 (musim kemarau)",
     "band": "B2, B3, B4, B8, B8A, B11, B12",
     "resolusi": "20 m, EPSG:32749 (UTM 49S)",
     "bbox": [113.25, -8.84, 114.64, -7.56],  # barat, selatan, timur, utara
-    "komposit": "B8A–B11–B4 (R=B8A, G=B11, B=B4)",
+    "komposit": "B8A-B11-B4 (R=B8A, G=B11, B=B4)",
     "indeks": "NDVI, NDWI, NDBI, MNDWI, NDMI",
 }
 
@@ -45,6 +45,7 @@ CLASSES = [
         "en": "Mangrove forest",
         "color": "#00e5c0",
     },
+    {"code": "other", "label": "Lainnya", "en": "Other", "color": "#808080"},
 ]
 ESRI_IMAGERY = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
 
@@ -122,10 +123,10 @@ with tab_bu:
 
     st.subheader("Tujuan")
     st.markdown(
-        "1. Memetakan permukaan bumi secara otomatis dari citra Sentinel-2 L2A ke dalam **lima kelas**: "
-        "bangunan, lahan pertanian, badan air, hutan, dan hutan mangrove.\n"
+        "1. Memetakan permukaan bumi secara otomatis dari citra Sentinel-2 L2A ke dalam **enam kelas**: "
+        "bangunan, lahan pertanian, badan air, hutan, hutan mangrove, dan lainnya (other).\n"
         "2. Membedakan **mangrove dari hutan biasa**. Keduanya sama-sama hijau, tetapi respons band "
-        "inframerah-gelombang-pendek (komposit B8A–B11–B4) berbeda.\n"
+        "inframerah-gelombang-pendek (komposit B8A-B11-B4) berbeda.\n"
         "3. Mendukung pemantauan lahan, tata ruang, dan konservasi lewat peta interaktif, ringkasan luas "
         "per kelas, dan akurasi model yang transparan."
     )
@@ -151,6 +152,7 @@ with tab_bu:
                     "Laut, danau, dan perairan lainnya",
                     "Hutan daratan",
                     "Hutan mangrove di pesisir",
+                    "Lahan terbuka, pasir, atau tutupan lainnya",
                 ],
             )
         )
@@ -161,7 +163,7 @@ with tab_bu:
     st.info(
         "Konteks studi adalah **Jawa Timur**. Karena keterbatasan waktu dan data, sampel latih dan peta "
         "dibuat untuk **wilayah percontohan Banyuwangi dan sekitarnya** (mendekati Situbondo dan Lumajang), "
-        f"yaitu kotak {w}°–{e}° BT dan {abs(n)}°–{abs(s)}° LS. Kotak ini juga memuat Selat Bali dan sedikit "
+        f"yaitu kotak {w}°-{e}° BT dan {abs(n)}°-{abs(s)}° LS. Kotak ini juga memuat Selat Bali dan sedikit "
         "daratan Bali bagian barat, yang bukan wilayah Jawa Timur. Alur yang sama dapat diterapkan ke "
         "wilayah Jawa Timur lainnya dengan sampel latih tambahan."
     )
@@ -203,7 +205,7 @@ with tab_alur:
             st.write(text)
 
     st.caption(
-        "Langkah 1–3 dijalankan di notebook (openEO dan Python). Aplikasi ini memuat hasilnya, "
+        "Langkah 1-3 dijalankan di notebook (openEO dan Python). Aplikasi ini memuat hasilnya, "
         "sehingga cepat dan tidak membutuhkan akun atau kuota Copernicus."
     )
 
@@ -235,7 +237,7 @@ with tab_alur:
     else:
         st.warning("`data/metrics.json` belum ada.")
 
-    st.header("Komposit B8A–B11–B4")
+    st.header("Komposit B8A-B11-B4")
     show_image(
         "perbandingan_komposit.png",
         "Contoh tiap kelas: warna alami, komposit tugas (B8A-B11-B4), dan vegetasi (B8-B4-B3)",
@@ -448,7 +450,7 @@ with tab_hasil:
             f"- {lemah}\n"
             "- Hanya ada lima kelas. Tutupan lain (tanah terbuka, savana, kebun, bayangan, lahan vulkanik) "
             "terpaksa dimasukkan ke salah satu dari lima kelas itu.\n"
-            "- Satu komposit musim kemarau (Juni–September 2026) tidak menangkap perubahan musiman, "
+            "- Satu komposit musim kemarau (Juni-September 2026) tidak menangkap perubahan musiman, "
             "misalnya sawah berair, tanam, dan bera.\n"
             "- Resolusi 20 m: objek sempit (rumah tunggal, jalur mangrove tipis) tidak tertangkap.\n"
             "- Cakupan hanya wilayah percontohan, bukan seluruh Jawa Timur."

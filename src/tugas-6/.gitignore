@@ -1,4 +1,16 @@
+# Output data raster & model
 openeo_out/
 openeo_out_jatim/
-digitizations/clean/
 outputs/
+outputs_jatim/
+
+# Data olahan / pembersihan sementara
+digitizations/clean/
+
+# File biner / besar jika tersimpan di luar folder output
+*.tif
+*.tiff
+*.joblib
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/

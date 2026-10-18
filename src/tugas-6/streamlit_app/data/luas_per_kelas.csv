@@ -1,6 +1,7 @@
 kelas,kode,piksel,luas_km2,persen
-Bangunan,built_up,29549407,11819.76,10.34
-Lahan pertanian,farmland,51796443,20718.58,18.12
-Badan air,water,152841222,61136.49,53.48
-Hutan,forest,50019723,20007.89,17.5
-Hutan mangrove,mangrove,1582272,632.91,0.55
+Bangunan,built_up,16868619,6747.45,5.9
+Lahan pertanian,farmland,49109384,19643.75,17.18
+Badan air,water,32785053,13114.02,11.47
+Hutan,forest,49880895,19952.36,17.45
+Hutan mangrove,mangrove,17150431,6860.17,6.0
+Lainnya,other,119994685,47997.87,41.99
