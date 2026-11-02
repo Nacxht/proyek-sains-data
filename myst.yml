@@ -7,5 +7,6 @@ project:
   - file: src/tugas-3/tugas_3.ipynb
   - file: src/tugas-4/tugas_4.ipynb
   - file: src/tugas-6/tugas_6.ipynb
+  - file: src/tugas-8/tugas_8.ipynb
 site:
   template: book-theme
