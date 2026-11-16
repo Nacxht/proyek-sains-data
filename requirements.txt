@@ -10,6 +10,8 @@ rasterio
 geopandas
 shapely
 scikit-learn
+scikit-image
+Pillow
 xgboost
 streamlit
 streamlit-folium
